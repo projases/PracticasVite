@@ -1,0 +1,70 @@
+:root {
+  --componentColor: #4a4a4a;
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+.menuAdvSearch {
+  background-color: var(--componentColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px;
+  width: 100svw;
+  height: 30svh;
+  position: absolute;
+  z-index: 1;
+  /* border: 2px solid red; */
+}
+
+.selectMenu {
+  width: 20%;
+  height: 25px;
+  /* font-size: 16px; Adjust font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+}
+.priceSearch {
+  /* border: 2px solid red; */
+  width: 40%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.priceSearch input {
+  width: 50%;
+  height: 50%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.priceSearch button {
+  width: 60px;
+  height: 50%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* .clearDiv {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: var(--componentColor);
+} */
+.clearButton:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.clearButton {
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  width: 60px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

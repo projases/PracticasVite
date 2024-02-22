@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de iPhones</title>
+  </head>
+  <header class="header">
+    <ul id="navbar">
+      <li>
+        <h1>
+          <img src="./assets/applelogo2.png" width="32px" alt="Apple logo" />
+        </h1>
+      </li>
+      <li>
+        <a class="home" href="">Store</a>
+      </li>
+      <li>
+        <a class="iphones" href="#">iPhones</a>
+      </li>
+      <li class="searchcontainer">
+        <!-- <form action="#" method="get"> -->
+        <input
+          type="search"
+          class="search"
+          placeholder="Search"
+          name="searchbox"
+        />
+        <!-- </form> -->
+      </li>
+      <li>
+        <img
+          class="advSearch"
+          src="./assets/dropdown.png"
+          width="20px"
+          alt="Advanced Search"
+        />
+      </li>
+
+      <li class="botondesplegable">
+        <img
+          id="shopcart"
+          id="opciones"
+          src="./assets/shopcart.png"
+          width="40px"
+          alt="más opciones"
+        />
+
+        <!-- <div class="divcontenedor">
+          <a class="ditem" href="#accounts">Accounts</a>
+          <a class="ditem" href="#setting">Settings</a>
+          <a class="ditem" href="#logout">Log out</a>
+        </div> -->
+      </li>
+    </ul>
+  </header>
+  <body class="body">
+    <div id="app">
+      <div id="iPhones"></div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

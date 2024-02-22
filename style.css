@@ -1,0 +1,131 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  --componentColor: #4a4a4a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100vh;
+}
+#navbar {
+  /* border: 2px solid red; */
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #4a4a4a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+}
+a:visited {
+  color: inherit;
+}
+.search {
+  display: flex;
+  flex-basis: 80vw;
+  color: white;
+  padding: 8px;
+  width: 60vw;
+  min-width: 100px;
+  font-size: 1em;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px none #ccc;
+  background-color: rgb(171, 169, 169);
+}
+.search:hover {
+  background-color: rgb(196, 194, 194);
+}
+#shopcart {
+  background-size: cover;
+  background-color: transparent;
+}
+
+#iPhones {
+  display: grid;
+  /* border: 2px solid red; */
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card {
+  max-width: 250px;
+  min-height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+/* Styling for the back face of the card */
+.back {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#5f6365, #4a4a4a);
+  position: absolute;
+  backface-visibility: hidden;
+  /* Hide the backface of the card */
+  transition: transform 1s;
+  transform: rotateY(180deg);
+  white-space: pre-line;
+
+  /* Initially hide the back face */
+}
+.back p {
+  height: 90%;
+  padding: 10%;
+  font-weight: 800;
+  line-height: 2em;
+}
+/* Styling for the front face of the card */
+.front {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 1s;
+}
+.card.flipped .back {
+  /* transition-duration: 1s; */
+  transform: rotateY(0deg); /* Rotate the back face to the front */
+  /* backface-visibility: hidden; */
+}
+
+/* Styling for the flipped state of the card */
+.card.flipped .front {
+  transform: rotateY(-180deg); /* Rotate the front face to the back */
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.1);
+}
+.blurred {
+  filter: blur(3px); /* Adjust the blur radius as needed */
+}
